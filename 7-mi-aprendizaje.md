@@ -1,3 +1,5 @@
-# COMPLETAR  
-Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
-Si solucionó un problema presentado al realizar la práctica también se debe documentar.
+# Mi Aprendizaje
+
+Durante el desarrollo de esta práctica he ampliado mis conocimientos sobre la administración avanzada y control preventivo de contenedores en Docker. Específicamente, aprendí la importancia de establecer restricciones en consumos físicos (tales como la delimitación de memoria RAM, Swap y cuotas núcleos de CPU) para garantizar que un contenedor no sofoque los recursos del servidor. También comprendí cómo configurar comprobaciones de "salud" de servicios (`healthchecks`) y analizar las diferentes políticas de reinicio automático (`always`, `on-failure`, `unless-stopped`), requisitos vitales para crear despliegues resilientes en producción. Al mismo tiempo, evidencié de primera mano cómo funciona la optimización de tiempos de la caché por capas al compilar un `Dockerfile`.
+
+Finalmente, logré solucionar un problema que interrumpió la construcción de la imagen inicial: la distribución `centos:7` en su estado "End of Life" ya no tenía repositorios de descarga activos. Pude solventar esa complicación técnica inyectando una regla con `sed` en el Dockerfile que redirigió correctamente las URL hacia el archivo histórico de descargas (`vault.centos.org`), resolviendo el error y permitiendo completar el empaquetado exitosamente.(esto lo resolví con ayuda de IA)
